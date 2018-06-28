@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Demo</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.onload = function () {
+        var script = document.createElement('script');
+        var firstScript = document.getElementsByTagName('script')[0];
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = '/sw-register.js?v=' + Date.now();
+        firstScript.parentNode.insertBefore(script, firstScript);
+      };
+    </script>
+  </body>
+</html>
